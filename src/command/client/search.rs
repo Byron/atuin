@@ -262,7 +262,7 @@ async fn query_results(
 ) -> Result<()> {
     let results = match app.input.as_str() {
         "" => {
-            db.list(app.filter_mode, &app.context, Some(200), true)
+            db.list(app.filter_mode, &app.context, Some(200), false)
                 .await?
         }
         i => {
